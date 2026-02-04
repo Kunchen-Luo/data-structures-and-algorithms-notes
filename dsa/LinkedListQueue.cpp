@@ -13,9 +13,12 @@ class LinkedListQueue {
         int queSize;
 
         void freeMemoryLinkedListQueue(ListNode* front) {
-
+           while(front->next != nullptr) {
+            ListNode* temp;
+            front = front->next;
+            delete temp;
+           }
         }
-    
     public:
         LinkedListQueue() {
             front = nullptr;
